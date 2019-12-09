@@ -5,7 +5,7 @@ import Table from 'react-bootstrap/Table'
 const Providers = (props) => {
 
     const results = props.providers
-    if (results.length > 0) {
+    if (results) {
         return (
             <React.Fragment>
                 <Container>
@@ -18,7 +18,7 @@ const Providers = (props) => {
                     </strong>
                 </Container>
                 <br />
-                <Table striped bordered hover>
+                <Table striped bordered hover responsive>
                     <thead>
                         <tr>
                         <th>#</th>

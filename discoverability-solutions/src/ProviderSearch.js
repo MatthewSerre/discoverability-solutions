@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
 
+
 class ProviderSearch extends React.Component {
 
     state = {search: '', providers: [], query: ''}
@@ -28,10 +29,11 @@ class ProviderSearch extends React.Component {
     render() {
         return (
             <Container>
+
                 <br />
                 <Form onSubmit={this.handleOnSubmit}>
                     <Form.Group controlId="formBasicSearch">
-                        <Form.Control type="text" name="search" onChange={this.handleOnChange} placeholder="Search" value={this.state.search} />
+                        <Form.Control type="text" name="search" onChange={this.handleOnChange} placeholder="" value={this.state.search} />
                         <Form.Text className="text-muted">
                             Search by provider name, regional office, counties served, and/or services offered.  A search performed with terms from multiple categories (e.g. "employment montgomery") will return only results that match all terms.  A search performed with no terms will return all entries in the database.
                         </Form.Text>
@@ -43,7 +45,7 @@ class ProviderSearch extends React.Component {
                 </Form>
                 <br />
                 <p>{this.state.query}</p>
-                <Providers providers={this.state.providers}/>
+                <Providers providers={this.state.providers} ref={el => (this.componentRef = el)}/>
             </Container>
         )
     }
