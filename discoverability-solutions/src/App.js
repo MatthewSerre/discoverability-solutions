@@ -30,15 +30,14 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
       <Switch>
-          <Route exact path="/">
-            <ProviderSearch />
-          </Route>
-          <Route path="/contribute">
-            <Contribute />
-          </Route>
-        </Switch>
-
-  </Router>
+        <Route exact path="/">
+          <ProviderSearch />
+        </Route>
+        <Route path="/contribute">
+          <Contribute />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

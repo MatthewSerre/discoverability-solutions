@@ -44,6 +44,7 @@ const Providers = (props) => {
                         )}
                     </tbody>
                 </Table>
+                <br />
             </React.Fragment>
     )} else {
         return null

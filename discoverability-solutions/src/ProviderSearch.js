@@ -30,7 +30,6 @@ class ProviderSearch extends React.Component {
         return (
             <div className="text-center">
             <Container>
-
                 <br />
                 <div>
                 Discoverability Solutions is an <a href="https://github.com/MatthewSerre/discoverability-solutions">open source</a>, single page application that allows you to search for providers of disability services in the Southern Maryland Region (other regions coming soon) obtained from <a href="https://dda.health.maryland.gov/Pages/Individuals.aspx">the list provided by the Developmental Disabilities Administration</a>.
@@ -47,10 +46,8 @@ class ProviderSearch extends React.Component {
                         Search
                     </Button>
                 </Form>
-                <br />
                 <p>{this.state.query}</p>
                 <Providers providers={this.state.providers} />
-
         </Container>
         </div>
         )
