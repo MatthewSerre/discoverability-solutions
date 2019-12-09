@@ -5,7 +5,7 @@ import Table from 'react-bootstrap/Table'
 const Providers = (props) => {
 
     const results = props.providers
-    if (results) {
+    if (results.length > 0) {
         return (
             <React.Fragment>
                 <Container>
