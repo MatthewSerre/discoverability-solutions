@@ -9,7 +9,6 @@ const Providers = (props) => {
         return (
             <React.Fragment>
                 <Container>
-                    <br />
                     <strong>
                     {props.providers.length} {
                         (props.providers.length === 1)

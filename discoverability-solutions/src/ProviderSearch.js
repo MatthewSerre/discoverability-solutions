@@ -45,6 +45,7 @@ class ProviderSearch extends React.Component {
                     <Button variant="primary" type="submit">
                         Search
                     </Button>
+                    <br />
                 </Form>
                 <p>{this.state.query}</p>
                 <Providers providers={this.state.providers} />
