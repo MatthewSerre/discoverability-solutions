@@ -39,7 +39,11 @@ const Providers = (props) => {
                             <td>{provider.countiesServed}</td>
                             <td>{provider.servicesOffered}</td>
                             <td>{provider.contactInformation}</td>
-                            <td><a href={provider.website} alt="Link" target="_blank" rel="noopener noreferrer" >Link</a></td>
+                            if ({provider.website}) {
+                            <td><a href={provider.website} alt="Link" target="_blank" rel="noopener noreferrer">Link</a></td>
+                            } else {
+                                <td>N/A</td>
+                            }
                             </tr>
                         )}
                     </tbody>

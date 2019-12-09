@@ -28,14 +28,18 @@ class ProviderSearch extends React.Component {
 
     render() {
         return (
+            <div className="text-center">
             <Container>
 
                 <br />
+                <div>
+                Discoverability Solutions is a single page application that allows you to search for providers of disability services in the Southern Maryland Region (other regions coming soon) obtained from <a href="https://dda.health.maryland.gov/Pages/Individuals.aspx">the list provided by the Developmental Disabilities Administration</a>.
+                </div>
+                <br />
                 <Form onSubmit={this.handleOnSubmit}>
                     <Form.Group controlId="formBasicSearch">
-                        <Form.Control type="text" name="search" onChange={this.handleOnChange} placeholder="" value={this.state.search} />
+                        <Form.Control type="text" name="search" onChange={this.handleOnChange} placeholder='e.g. "arc", "rockville", "montgomery", "employment"' value={this.state.search} />
                         <Form.Text className="text-muted">
-                            Search by provider name, regional office, counties served, and/or services offered.  A search performed with terms from multiple categories (e.g. "employment montgomery") will return only results that match all terms.  A search performed with no terms will return all entries in the database.
                         </Form.Text>
                     </Form.Group>
 
@@ -45,8 +49,10 @@ class ProviderSearch extends React.Component {
                 </Form>
                 <br />
                 <p>{this.state.query}</p>
-                <Providers providers={this.state.providers} ref={el => (this.componentRef = el)}/>
-            </Container>
+                <Providers providers={this.state.providers} />
+
+        </Container>
+        </div>
         )
     }
 }
