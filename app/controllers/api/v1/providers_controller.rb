@@ -5,6 +5,7 @@ class Api::V1::ProvidersController < ApplicationController
     else
       providers = Provider.search(params[:search])
     end
+
     render json: providers
   end
 

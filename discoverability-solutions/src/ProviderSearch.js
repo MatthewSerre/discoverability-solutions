@@ -16,12 +16,14 @@ class ProviderSearch extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.setState({ query: ""})
-        fetch(`/api/v1/providers?search=` + this.state.search )
+        fetch(`http://localhost:3000/api/v1/providers?search=` + this.state.search )
         .then(res => res.json())
         .then(data => this.setState({providers: [ ...data ]}))
         .catch(errors => errors)
         if (this.state.search !== "") {
         this.setState({ query: "Search result(s) for " + this.state.search + ":"})
+        } else {
+            this.setState({ query: "Search result for all records."})
         }
         this.setState({search: ''})
     }
@@ -47,6 +49,7 @@ class ProviderSearch extends React.Component {
                     </Button>
                     <br />
                 </Form>
+                <br />
                 <p>{this.state.query}</p>
                 <Providers providers={this.state.providers} />
         </Container>
