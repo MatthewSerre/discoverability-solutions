@@ -16,7 +16,7 @@ class ProviderSearch extends React.Component {
     handleOnSubmit = (event) => {
         event.preventDefault()
         this.setState({ query: ""})
-        fetch(`http://localhost:3000/api/v1/providers?search=` + this.state.search )
+        fetch(`/api/v1/providers?search=` + this.state.search )
         .then(res => res.json())
         .then(data => this.setState({providers: [ ...data ]}))
         .catch(errors => errors)
