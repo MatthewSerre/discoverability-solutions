@@ -19,7 +19,7 @@ function App() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="mailto:matthew.serre@gmail.com">Contact</Nav.Link>
+            <Nav.Link href="mailto:admin@discoverability.solutions">Contact</Nav.Link>
             <Nav.Link as={Link} to="/contribute">Contribute</Nav.Link>
           </Nav>
           <Nav>
