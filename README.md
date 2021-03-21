@@ -1,10 +1,15 @@
 # Discoverability Solutions
 
-Discoverability Solutions is an open source, single page application that allows you to search for providers of disability services in the Southern Maryland Region (other regions coming soon) obtained from the list provided by the Developmental Disabilities Administration.
+[Discoverability Solutions](https://discoverability-solutions.herokuapp.com/) is an open source, single page application that allows you to search for providers of disability services in the Southern Maryland Region (other regions coming soon) obtained from the list provided by the Developmental Disabilities Administration.
 
-## Getting Started
+## Prerequisites/Installation
 
-To run the app locally, fork and clone the repository and then change to the project directory.  In the main directory of the app, run bundle and then rake db:create, rake db:migrate, and rake db:seed and in the /discoverability-solutions directory, run npm install.  You can run rails s in the main directory and npm start in the sub-directory to open the application.
+1. Install and configure PostgreSQL
+2. Clone the repository
+3. Run `bundle install` or similar in the main directory
+4. Run `rails db:create`, `rails db:migrate`, and `rails db:seed`
+5. Run `rails s` to start the back-end
+6. Switch to the `discoverability-solutions` directory and run `npm install` and `npm start`
 
 ## Contributing
 
